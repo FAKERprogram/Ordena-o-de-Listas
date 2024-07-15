@@ -1,0 +1,29 @@
+# Palpites para mega sena!
+import random as rd
+
+# Quantos jogos o jogador quer?!
+
+jogos = int(input("Quantos jogos você quer fazer? "))
+
+# Lista para armazenar os resultados
+
+resultados = []
+
+# Gerando os jogos
+
+for i in range(jogos):
+
+    # Gerando os números da mega-sena
+
+    numeros = sorted(rd.sample(range(1, 61), 6))
+    
+    # Adicionando os números à lista de resultados
+    
+    resultados.append(numeros)
+    
+# Mostrando os resultados
+
+for i, jogo in enumerate(resultados, 1):
+
+    print(f"Jogo {i}: {jogo}")
+
